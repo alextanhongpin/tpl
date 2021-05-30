@@ -2,6 +2,13 @@
 
 Generate golang templates with JSON data 💪.
 
+Using `go 1.16.3`.
+
+Installation:
+
+```bash
+$ go install github.com/alextanhongpin/tpl
+```
 
 Usage:
 ```bash
