@@ -23,7 +23,9 @@ func main() {
 	if err := exec(*in, *out, *js, *dryRun); err != nil {
 		panic(err)
 	}
-	fmt.Printf("wrote file to %s\n", *out)
+	if !*dryRun {
+		fmt.Printf("wrote file to %s\n", *out)
+	}
 }
 
 func exec(in, out, js string, dryRun bool) error {
@@ -69,7 +71,7 @@ func exec(in, out, js string, dryRun bool) error {
 
 	if dryRun {
 		// Print to stdout.
-		fmt.Println(result)
+		fmt.Println(string(result))
 	} else {
 		// Create the output directory.
 		if err := os.MkdirAll(path.Dir(out), os.ModePerm); err != nil {
