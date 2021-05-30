@@ -1,6 +1,6 @@
-# tpl
+# tpl ✍️
 
-Generate golang templates with json data.
+Generate golang templates with JSON data 💪.
 
 
 Usage:
@@ -10,7 +10,7 @@ $ tpl -in=in.tpl -out=out.go -data data.json
 
 
 
-Content of `in.tpl` (the naming can be `.txt`, `.tmpl`, it is up to you):
+Content of `in.tpl`:
 ```
 package main
 
@@ -19,15 +19,15 @@ func main() {
 }
 ```
 
+The input file extension can also be `.txt`, `.tmpl`, it is up to you :smile:
+
+
 Content of `data.json`:
 ```json
 {
 	"msg": "world"
 }
 ```
-
-Note the `pascalcase` naming convention to allow golang templates to read the data.
-
 
 Content of `out.go`:
 ```go
