@@ -6,6 +6,9 @@ Generate golang templates with JSON data 💪.
 Usage:
 ```bash
 $ tpl -in=in.tpl -out=out.go -data data.json
+
+# To print to stdout without creating the files.
+$ tpl -in=in.tpl -out=out.go -data data.json -dry-run
 ```
 
 
