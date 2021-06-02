@@ -97,6 +97,9 @@ func exec(in, out, js string, dryRun bool) error {
 // format is gofmt with addition of removing any unused imports.
 func format(source []byte) ([]byte, error) {
 	return imports.Process("", source, &imports.Options{
-		AllErrors: true, Comments: true, TabIndent: true, TabWidth: 8,
+		AllErrors: true,
+		Comments:  true,
+		TabIndent: true,
+		TabWidth:  8,
 	})
 }
